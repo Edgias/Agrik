@@ -32,13 +32,13 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AgrikDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("MutengiConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("AgrikDbConnection")));
 
             //services.AddDbContext<AgrikIdentityDbContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("MutengiIdentityConnection")));
+            //    options.UseSqlServer(Configuration.GetConnectionString("AgrikIdentityConnection")));
 
             //services.AddIdentity<ApplicationUser, IdentityRole>()
-            //        .AddEntityFrameworkStores<MutengiIdentityDbContext>()
+            //        .AddEntityFrameworkStores<AgrikIdentityDbContext>()
             //        .AddDefaultTokenProviders();
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
@@ -49,7 +49,7 @@ namespace API
             //services.AddScoped<IIdentityService, IdentityService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            //services.AddObjectMappers();
+            services.AddObjectMappers();
 
             services.AddCors(options =>
             {
