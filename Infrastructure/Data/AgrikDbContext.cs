@@ -20,6 +20,12 @@ namespace Edgias.Agrik.Infrastructure.Data
             _domainEventDispatcher = domainEventDispatcher;
         }
 
+        public DbSet<Crop> Crops { get; set; }
+
+        public DbSet<CropCategory> CropCategories { get; set; }
+
+        public DbSet<CropUnit> CropUnits { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

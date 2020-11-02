@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Mutengi.WebAPI.Models.View
+namespace Edgias.Agrik.API.Models.View
 {
-    public class APIResponse<T>
+    public class ApiResponse<T>
     {
         public int Count { get; set; }
 
