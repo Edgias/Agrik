@@ -12,6 +12,8 @@ namespace Edgias.Agrik.ApplicationCore.Specifications
         public CropSpecification(int skip, int take, string searchQuery) 
             : base(c => string.IsNullOrEmpty(searchQuery) || c.Name.Contains(searchQuery))
         {
+            AddInclude(c => c.CropCategory);
+            AddInclude(c => c.CropUnit);
             ApplyOrderBy(c => c.Name);
             ApplyPaging(skip, take);
         }

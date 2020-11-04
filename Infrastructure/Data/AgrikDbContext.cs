@@ -26,6 +26,30 @@ namespace Edgias.Agrik.Infrastructure.Data
 
         public DbSet<CropUnit> CropUnits { get; set; }
 
+        public DbSet<CropVariety> CropVarieties { get; set; }
+
+        public DbSet<Field> Fields { get; set; }
+
+        public DbSet<FieldMeasurement> FieldMeasurements { get; set; }
+
+        public DbSet<Location> Locations { get; set; }
+
+        public DbSet<OwnershipType> OwnershipTypes { get; set; }
+
+        public DbSet<Season> Seasons { get; set; }
+
+        public DbSet<SeasonStatus> SeasonStatuses { get; set; }
+
+        public DbSet<SoilType> SoilTypes { get; set; }
+
+        public DbSet<WorkItem> WorkItems { get; set; }
+
+        public DbSet<WorkItemCategory> WorkItemCategories { get; set; }
+
+        public DbSet<WorkItemStatus> WorkItemStatuses { get; set; }
+
+        public DbSet<WorkItemSubCategory> WorkItemSubCategories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
