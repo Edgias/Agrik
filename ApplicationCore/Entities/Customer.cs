@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Edgias.Agrik.ApplicationCore.Entities
+﻿namespace Edgias.Agrik.ApplicationCore.Entities
 {
     public class Customer : BaseEntity
     {
