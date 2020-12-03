@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Edgias.Agrik.ApplicationCore.Entities
 {
@@ -11,5 +9,13 @@ namespace Edgias.Agrik.ApplicationCore.Entities
         public Guid CropId { get; set; }
 
         public Crop Crop { get; set; }
+
+        public Guid SeasonId { get; set; }
+
+        public Season Season { get; set; }
+
+        public decimal ExpectedYield { get; set; }
+
+        public decimal? ActualYield { get; set; }
     }
 }
