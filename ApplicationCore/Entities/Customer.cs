@@ -13,5 +13,7 @@
         public string ContactPersonEmail { get; set; }
 
         public string ContactPersonPhone { get; set; }
+
+        public Address BillingAddress { get; set; }
     }
 }
